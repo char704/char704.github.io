@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phuong's Portfolio</title>
+  <title>Responsive Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     html {
@@ -55,14 +55,14 @@
       margin-left: 250px;
       padding: 2rem;
       width: 100%;
-      max-width: 800px;       /* Giới hạn chiều rộng nội dung */
-      margin-inline: auto;    /* Căn giữa theo chiều ngang */
+      max-width: 800px;
+      margin-inline: auto;
     }
-
 
     section {
       padding: 60px 0;
       border-bottom: 1px solid #ccc;
+      scroll-margin-top: 100px; /* Fix anchor scroll issue */
     }
 
     footer {
@@ -103,11 +103,9 @@
       .content {
         margin-left: 0;
         padding: 1rem;
-        padding-top: 80px;
-        max-width: 800px;
-        margin-inline: auto;
+        padding-top: 100px; /* Space for fixed navbar */
       }
-      
+
       section h3 {
         font-size: 1.25rem;
         text-align: center;
@@ -131,11 +129,7 @@
 
     <!-- Sidebar -->
     <nav class="sidebar">
-      <h2>Nguyen Thanh Phuong</h2>
-      <img src="SnapFolio/assets/img/profile/profile-2.jpg" 
-       alt="Avatar" 
-       class="rounded-circle mb-3" 
-       style="width:120px; height:120px;">
+      <h2>My Portfolio</h2>
       <a href="#intro">👋 Intro</a>
       <a href="#skills">🧠 Skills</a>
       <a href="#projects">📁 Projects</a>
