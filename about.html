@@ -3,42 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio with Sidebar</title>
+  <title>Portfolio with Smooth Scroll</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       display: flex;
-      min-height: 100vh;
       margin: 0;
+      min-height: 100vh;
     }
 
     .sidebar {
       width: 250px;
       background-color: #343a40;
       color: white;
-      flex-shrink: 0;
-      position: fixed;
-      height: 100vh;
       padding: 2rem 1rem;
+      height: 100vh;
+      position: fixed;
     }
 
     .sidebar h2 {
       font-size: 1.5rem;
-      margin-bottom: 2rem;
     }
 
     .sidebar a {
       display: block;
       color: white;
       text-decoration: none;
-      padding: 0.5rem 0;
-      margin-bottom: 0.5rem;
-      transition: background-color 0.3s;
+      margin: 1rem 0;
+      transition: 0.3s;
     }
 
     .sidebar a:hover {
-      background-color: #495057;
+      background: #495057;
+      padding-left: 10px;
       border-radius: 4px;
     }
 
@@ -48,20 +49,18 @@
       width: 100%;
     }
 
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
     @media (max-width: 768px) {
       .sidebar {
         position: static;
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
-      }
-
-      .sidebar a {
-        margin: 0;
-        padding: 1rem;
-        text-align: center;
       }
 
       .content {
@@ -74,54 +73,50 @@
 
 <body>
 
-  <!-- SIDEBAR -->
+  <!-- Sidebar Menu -->
   <nav class="sidebar">
     <h2>My Portfolio</h2>
     <a href="#intro">👋 Intro</a>
     <a href="#skills">🧠 Skills</a>
-    <a href="#projects">📁 Project</a>
+    <a href="#projects">📁 Projects</a>
     <a href="#contact">📞 Contact</a>
   </nav>
 
-  <!-- MAIN CONTENT -->
+  <!-- Main Content -->
   <div class="content">
-    <!-- INTRO -->
-    <section id="intro" class="mb-5">
+
+    <section id="intro">
       <h3>👋 Intro</h3>
-      <p>I'm a third-year Computer Science student with hands-on experience in deep learning projects, including handwritten digit recognition and image super-resolution using Tensorflow and PyTorch. I’m passionate about AI and Data.</p>
+      <p>I'm a third-year Computer Science student with experience in deep learning projects like digit recognition and image super-resolution.</p>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="mb-5">
+    <section id="skills">
       <h3>🧠 Skills</h3>
       <ul>
         <li>HTML, CSS, JavaScript</li>
         <li>Bootstrap</li>
-        <li>Git, GitHub</li>
         <li>Python</li>
-        <li>SQL</li>
+        <li>Git & GitHub</li>
       </ul>
     </section>
 
-    <!-- PROJECT -->
-    <section id="projects" class="mb-5">
-      <h3>📁 Project</h3>
+    <section id="projects">
+      <h3>📁 Projects</h3>
       <h5>Library management system</h5>
-      <p>Using WinForms and SQL</p>
+      <p>Using WinForms and SQL.</p>
       <a href="https://github.com/char704/Library_App" class="btn btn-primary btn-sm">View Project</a>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <h3>📞 Contact</h3>
       <p>Email: <a href="mailto:nthanhphuong2112004@gmail.com">nthanhphuong2112004@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/char704" target="_blank">char704</a></p>
     </section>
 
-    <footer class="mt-5 text-center text-muted">
+    <footer class="text-center mt-5 text-muted">
       © 2025 CHARLES.
     </footer>
-  </div>
 
+  </div>
 </body>
 </html>
