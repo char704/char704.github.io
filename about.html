@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio with Smooth Scroll</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      display: flex;
       margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .layout {
+      display: flex;
       min-height: 100vh;
     }
 
@@ -20,6 +24,7 @@
       width: 250px;
       background-color: #343a40;
       color: white;
+      flex-shrink: 0;
       padding: 2rem 1rem;
       height: 100vh;
       position: fixed;
@@ -27,18 +32,19 @@
 
     .sidebar h2 {
       font-size: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .sidebar a {
       display: block;
       color: white;
       text-decoration: none;
-      margin: 1rem 0;
+      margin-bottom: 1rem;
       transition: 0.3s;
     }
 
     .sidebar a:hover {
-      background: #495057;
+      background-color: #495057;
       padding-left: 10px;
       border-radius: 4px;
     }
@@ -54,18 +60,56 @@
       border-bottom: 1px solid #ccc;
     }
 
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* === Responsive for Mobile === */
     @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
       .sidebar {
-        position: static;
         width: 100%;
         height: auto;
+        position: static;
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
+        padding: 1rem;
+      }
+
+      .sidebar h2 {
+        display: none;
+      }
+
+      .sidebar a {
+        margin: 0;
+        font-size: 1rem;
+        padding: 0.5rem;
       }
 
       .content {
         margin-left: 0;
         padding: 1rem;
+      }
+
+      section h3 {
+        font-size: 1.25rem;
+        text-align: center;
+      }
+
+      section p, section li {
+        font-size: 1rem;
+        text-align: justify;
+      }
+
+      footer {
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -73,50 +117,55 @@
 
 <body>
 
-  <!-- Sidebar Menu -->
-  <nav class="sidebar">
-    <h2>My Portfolio</h2>
-    <a href="#intro">👋 Intro</a>
-    <a href="#skills">🧠 Skills</a>
-    <a href="#projects">📁 Projects</a>
-    <a href="#contact">📞 Contact</a>
-  </nav>
+  <div class="layout">
 
-  <!-- Main Content -->
-  <div class="content">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <h2>My Portfolio</h2>
+      <a href="#intro">👋 Intro</a>
+      <a href="#skills">🧠 Skills</a>
+      <a href="#projects">📁 Projects</a>
+      <a href="#contact">📞 Contact</a>
+    </nav>
 
-    <section id="intro">
-      <h3>👋 Intro</h3>
-      <p>I'm a third-year Computer Science student with experience in deep learning projects like digit recognition and image super-resolution.</p>
-    </section>
+    <!-- Main Content -->
+    <div class="content">
 
-    <section id="skills">
-      <h3>🧠 Skills</h3>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Bootstrap</li>
-        <li>Python</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </section>
+      <section id="intro">
+        <h3>👋 Intro</h3>
+        <p>I'm a third-year Computer Science student with experience in deep learning projects like digit recognition and image super-resolution. I’m passionate about AI and data science.</p>
+      </section>
 
-    <section id="projects">
-      <h3>📁 Projects</h3>
-      <h5>Library management system</h5>
-      <p>Using WinForms and SQL.</p>
-      <a href="https://github.com/char704/Library_App" class="btn btn-primary btn-sm">View Project</a>
-    </section>
+      <section id="skills">
+        <h3>🧠 Skills</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Bootstrap</li>
+          <li>Git & GitHub</li>
+          <li>Python</li>
+          <li>SQL</li>
+        </ul>
+      </section>
 
-    <section id="contact">
-      <h3>📞 Contact</h3>
-      <p>Email: <a href="mailto:nthanhphuong2112004@gmail.com">nthanhphuong2112004@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/char704" target="_blank">char704</a></p>
-    </section>
+      <section id="projects">
+        <h3>📁 Projects</h3>
+        <h5>Library Management System</h5>
+        <p>Built using WinForms and SQL.</p>
+        <a href="https://github.com/char704/Library_App" class="btn btn-primary btn-sm">View on GitHub</a>
+      </section>
 
-    <footer class="text-center mt-5 text-muted">
-      © 2025 CHARLES.
-    </footer>
+      <section id="contact">
+        <h3>📞 Contact</h3>
+        <p>Email: <a href="mailto:nthanhphuong2112004@gmail.com">nthanhphuong2112004@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/char704" target="_blank">char704</a></p>
+      </section>
 
+      <footer>
+        © 2025 CHARLES.
+      </footer>
+
+    </div>
   </div>
+
 </body>
 </html>
