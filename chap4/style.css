@@ -1,0 +1,9 @@
+#wrapper {margin:auto; width: 1024px; border:2px blue solid;}
+header {height:50px; text-align:center; color:red; background:yellow;}
+h1 {font-size:22pt; font-weight:bold; text-align:center; }
+h2 {font-size:18pt; text-align:center;}
+p {font-size:14pt; text-align:center;}
+a {font-size:14pt;}
+#leftcol {float:left; width:150px; height:130px; background:aqua;}
+#rightcol {float:right; width:150px; height:130px; background:aqua;}
+#midcol {margin-left:155px; margin-right:155px;}
