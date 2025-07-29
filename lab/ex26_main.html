@@ -1,7 +1,33 @@
-<frameset rows=”25%, 75 %”>
-<frame src=”ex26_top.html” name=”top”>
-<frameset cols=”25%,75%”>
-<frame src=”ex26_left.html” name=”left”>
-<frame src=”ex26_right.html” name=”right”>
-</frameset>
-</frameset>
+<html>
+<head>
+    <title>Form Elements</title>
+</head>
+<body bgcolor="skyblue">
+
+    <h1>Form Elements</h1>
+    
+    <form>
+        <label>Enter your name:</label>
+        <input type="text" name="uname"><br><br>
+        
+        <label>Password:</label>
+        <input type="password" name="pass"><br><br>
+        
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female<br><br>
+        
+        <label>Languages Known:</label><br>
+        <input type="checkbox" name="lang1" value="English">English<br>
+        <input type="checkbox" name="lang2" value="Hindi">Hindi<br>
+        <input type="checkbox" name="lang3" value="Telugu">Telugu<br><br>
+        
+        <label>Address:</label><br>
+        <textarea rows="5" cols="30"></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+</body>
+</html>
