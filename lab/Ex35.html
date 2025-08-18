@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>India Map</title>
+<style>
+    body {
+        background-color: pink;
+        font-family: "Monotype Corsiva", cursive;
+        text-align: center;
+    }
+    h1 {
+        color: blue;
+        font-size: 2.5em;
+        animation: marquee 4s linear infinite alternate;
+        white-space: nowrap;
+    }
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50px); }
+    }
+    .map-container {
+        position: relative;
+        display: inline-block;
+    }
+    .hotspot {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-color: red;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+    /* Tọa độ chấm đỏ (theo px so với ảnh) */
+    .delhi { top: 228px; left: 870px; }
+    .hyderabad { top: 423px; left: 850px; }
+    .mumbai { top: 407px; left: 800px; }
+    .chennai { top: 549px; left: 950px; }
+</style>
+</head>
+<body>
+
+<h1>INDIA MAP</h1>
+<hr style="border: 3px solid red;">
+
+<div class="map-container">
+    <img src="../Image/India map.jpg" alt="India Map">
+    <!-- Chấm đỏ clickable -->
+    <a href="map1.html" class="hotspot delhi" title="Delhi"></a>
+    <a href="map2.html" class="hotspot hyderabad" title="Hyderabad"></a>
+    <a href="map3.html" class="hotspot mumbai" title="Mumbai"></a>
+    <a href="map4.html" class="hotspot chennai" title="Chennai"></a>
+</div>
+
+<p style="color: red; font-size: 1.2em;">
+    <b>Hints:</b> <i>Click on the red dots to know about the cities</i>
+</p>
+
+</body>
+</html>
