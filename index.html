@@ -1,15 +1,78 @@
 <html>
 <head>
-<title>program 09</title>
+<title>test</title>
 </head>
 <body>
-<ol>
-<li>English </li>
-<li>Maths-2</li>
-<li>Digital Electronics & computer
-fundamentals</li> <li>Basic Web design lab</li>
-<li>multimedia lab</li>
-<li>digital electronics</li>
-</ol>
+<script>
+    // Configs
+    let liveChatBaseUrl   = document.location.protocol + '//' + 'livechat.fpt.ai/v36/src'
+    let LiveChatSocketUrl = 'livechat.fpt.ai:443'
+    let FptAppCode        = '4144e91e99c6ba335e6853658e275332'
+    let FptAppName        = 'Hỏi đáp'
+    // Define custom styles
+    let CustomStyles = {
+        // header
+        headerBackground: 'linear-gradient(86.7deg, #3353a2ff 0.85%, #31B7B7FF 98.94%)',
+        headerTextColor: '#ffffffff',
+        headerLogoEnable: false,
+        headerLogoLink: 'https://chatbot-tools.fpt.ai/livechat-builder/img/Icon-fpt-ai.png',
+        headerText: 'Hỏi đáp',
+        // main
+        primaryColor: '#6d9ccbff',
+        secondaryColor: '#ecececff',
+        primaryTextColor: '#FFFFFFFF',
+        secondaryTextColor: '#000000DE',
+        buttonColor: '#b4b4b4ff',
+        buttonTextColor: '#ffffffff',
+        bodyBackgroundEnable: false,
+        bodyBackgroundLink: '',
+        avatarBot: 'https://chatbot-tools.fpt.ai/livechat-builder/img/bot.png',
+        sendMessagePlaceholder: 'Nhập câu hỏi ở đây',
+        // float button
+        floatButtonLogo: 'https://chatbot-tools.fpt.ai/livechat-builder/img/Icon-fpt-ai.png',
+        floatButtonTooltip: 'Can I help you?',
+        floatButtonTooltipEnable: true,
+        // start screen
+        customerLogo: 'https://chatbot-tools.fpt.ai/livechat-builder/img/bot.png',
+        customerWelcomeText: 'Nhập tên của bạn',
+        customerButtonText: 'Bắt đầu',
+        prefixEnable: false,
+        prefixType: 'radio',
+        prefixOptions: ["Anh","Chị"],
+        prefixPlaceholder: 'Danh xưng',
+        // custom css
+        css: ''
+    }
+    // Get bot code from url if FptAppCode is empty
+    if (!FptAppCode) {
+        let appCodeFromHash = window.location.hash.substr(1)
+        if (appCodeFromHash.length === 32) {
+            FptAppCode = appCodeFromHash
+        }
+    }
+    // Set Configs
+    let FptLiveChatConfigs = {
+        appName: FptAppName,
+        appCode: FptAppCode,
+        themes : '',
+        styles : CustomStyles
+    }
+    // Append Script
+    let FptLiveChatScript  = document.createElement('script')
+    FptLiveChatScript.id   = 'fpt_ai_livechat_script'
+    FptLiveChatScript.src  = liveChatBaseUrl + '/static/fptai-livechat.js'
+    document.body.appendChild(FptLiveChatScript)
+    // Append Stylesheet
+    let FptLiveChatStyles  = document.createElement('link')
+    FptLiveChatStyles.id   = 'fpt_ai_livechat_script'
+    FptLiveChatStyles.rel  = 'stylesheet'
+    FptLiveChatStyles.href = liveChatBaseUrl + '/static/fptai-livechat.css'
+    document.body.appendChild(FptLiveChatStyles)
+    // Init
+    FptLiveChatScript.onload = function () {
+        fpt_ai_render_chatbox(FptLiveChatConfigs, liveChatBaseUrl, LiveChatSocketUrl)
+    }
+</script>
 </body>
 </html>
+
