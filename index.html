@@ -6,39 +6,40 @@
 </head>
 <body>
   <div>Test chatbot</div>
+
 <script>
     // Configs
     let liveChatBaseUrl   = document.location.protocol + '//' + 'livechat.fpt.ai/v36/src'
     let LiveChatSocketUrl = 'livechat.fpt.ai:443'
     let FptAppCode        = '4144e91e99c6ba335e6853658e275332'
-    let FptAppName        = 'Hỏi đáp'
+    let FptAppName        = 'Live support'
     // Define custom styles
     let CustomStyles = {
         // header
-        headerBackground: 'linear-gradient(86.7deg, #3353a2ff 0.85%, #31B7B7FF 98.94%)',
+        headerBackground: 'linear-gradient(86.7deg, #3353a2ff 0.85%, #31b7b7ff 98.94%)',
         headerTextColor: '#ffffffff',
         headerLogoEnable: false,
         headerLogoLink: 'https://chatbot-tools.fpt.ai/livechat-builder/img/Icon-fpt-ai.png',
-        headerText: 'Hỏi đáp',
+        headerText: 'Live support',
         // main
         primaryColor: '#6d9ccbff',
         secondaryColor: '#ecececff',
-        primaryTextColor: '#FFFFFFFF',
+        primaryTextColor: '#ffffffff',
         secondaryTextColor: '#000000DE',
         buttonColor: '#b4b4b4ff',
         buttonTextColor: '#ffffffff',
         bodyBackgroundEnable: false,
         bodyBackgroundLink: '',
         avatarBot: 'https://chatbot-tools.fpt.ai/livechat-builder/img/bot.png',
-        sendMessagePlaceholder: 'Nhập câu hỏi ở đây',
+        sendMessagePlaceholder: 'Enter your message here',
         // float button
-        floatButtonLogo: 'https://chatbot-tools.fpt.ai/livechat-builder/img/Icon-fpt-ai.png',
+        floatButtonLogo: 'https://agents.fpt.ai/live-chat/img/chatbot-icon.gif',
         floatButtonTooltip: 'Can I help you?',
         floatButtonTooltipEnable: true,
         // start screen
         customerLogo: 'https://chatbot-tools.fpt.ai/livechat-builder/img/bot.png',
-        customerWelcomeText: 'Nhập tên của bạn',
-        customerButtonText: 'Bắt đầu',
+        customerWelcomeText: 'Please input your name',
+        customerButtonText: 'Start',
         prefixEnable: false,
         prefixType: 'radio',
         prefixOptions: ["Anh","Chị"],
@@ -76,8 +77,10 @@
         fpt_ai_render_chatbox(FptLiveChatConfigs, liveChatBaseUrl, LiveChatSocketUrl)
     }
 </script>
+
 </body>
 </html>
+
 
 
 
